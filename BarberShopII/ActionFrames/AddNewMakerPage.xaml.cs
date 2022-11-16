@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BarberShopII.DB;
 
 namespace BarberShopII.ActionFrames
 {
@@ -24,10 +25,17 @@ namespace BarberShopII.ActionFrames
         {
             InitializeComponent();
         }
+        Maker m = new Maker();
 
         private void AddNewMakerBtn_Click(object sender, RoutedEventArgs e)
         {
+            m.Name = AddMakerTbx.Text;
 
+            conDB.bred.Maker.Add(m);
+            conDB.bred.SaveChanges();
+
+            MessageBox.Show("Успешно");
+            AddMakerTbx.Text = "";
         }
     }
 }

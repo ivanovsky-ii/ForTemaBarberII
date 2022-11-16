@@ -32,7 +32,8 @@
                      HorizontalAlignment="Center"
                      TextAlignment="Center"
                      FontSize="25"
-                     FontFamily="Cascadia Code SemiBold"/>
+                     FontFamily="Cascadia Code SemiBold"
+                     Name="AddMakerTbx"/>
             <Button Grid.Row="1" Grid.ColumnSpan="2"
                     Height="50"
                     Width="150"

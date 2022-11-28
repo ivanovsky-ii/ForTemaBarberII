@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BarberShopII.DB;
 
 namespace BarberShopII.ActionFrames
 {
@@ -23,6 +24,7 @@ namespace BarberShopII.ActionFrames
         public AllViewPage()
         {
             InitializeComponent();
+            PPPk.ItemsSource = conDB.bred.SummaryTable.ToList();
         }
     }
 }

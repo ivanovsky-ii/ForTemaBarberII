@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BarberShopII.ActionFrames;
 
 namespace BarberShopII.ActionFrames
 {
@@ -27,27 +28,27 @@ namespace BarberShopII.ActionFrames
 
         private void AddMakerBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationCLass.MainAction.Navigate(new ActionFrames.AddNewMakerPage());
         }
 
         private void AddGoodBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationCLass.MainAction.Navigate(new ActionFrames.GoodsPage());
         }
 
         private void AddEmployeeBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationCLass.MainAction.Navigate(new ActionFrames.EmployeePage());
         }
 
         private void RecordBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationCLass.MainAction.Navigate(new ActionFrames.RecordPage());
         }
 
         private void AllViewBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationCLass.MainAction.Navigate(new ActionFrames.AllViewPage());
         }
     }
 }

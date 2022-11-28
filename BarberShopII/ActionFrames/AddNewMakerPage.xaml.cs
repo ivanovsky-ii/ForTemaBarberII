@@ -36,6 +36,7 @@ namespace BarberShopII.ActionFrames
 
             MessageBox.Show("Успешно");
             AddMakerTbx.Text = "";
+            
         }
     }
 }

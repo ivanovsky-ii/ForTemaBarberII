@@ -18,7 +18,7 @@
                        FontFamily="Cascadia Code SemiBold"
                        Foreground="Purple"
                        Margin="0 30 0 0 "/>
-            <TextBlock Text="Перегрузка"
+            <TextBlock Text="Перезагрузка"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
                        FontSize="48"

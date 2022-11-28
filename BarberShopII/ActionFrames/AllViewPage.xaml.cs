@@ -24,7 +24,15 @@ namespace BarberShopII.ActionFrames
         public AllViewPage()
         {
             InitializeComponent();
-            PPPk.ItemsSource = conDB.bred.SummaryTable.ToList();
+            //PPPk.ItemsSource = conDB.bred.SummaryTable.ToList();
+            EmplCmbx.ItemsSource = conDB.bred.Employee.ToList();
+
+            
+        }
+
+        private void EmplCmbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            PPPk.ItemsSource = conDB.bred.SummaryTable.Where(io => io.IdEmployee == ((Employee)EmplCmbx.SelectedItem).Id).ToList();
         }
     }
 }

@@ -5,14 +5,15 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="16d8d40526084162920ab0a18d5e8fe5" Name="Diagram1" ZoomLevel="86">
-        <EntityTypeShape EntityType="BarberIIModel.Employee" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BarberIIModel.Maker" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BarberIIModel.Material" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BarberIIModel.SummaryTable" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="BarberIIModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <AssociationConnector Association="BarberIIModel.FK_SummaryTable_Employee" ManuallyRouted="false" />
-        <AssociationConnector Association="BarberIIModel.FK_Material_Maker" ManuallyRouted="false" />
-        <AssociationConnector Association="BarberIIModel.FK_SummaryTable_Material" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BarberIIModel.Employee" Width="1.5" PointX="3" PointY="5.5" />
+        <EntityTypeShape EntityType="BarberIIModel.Maker" Width="1.5" PointX="0.75" PointY="1.5" />
+        <EntityTypeShape EntityType="BarberIIModel.Material" Width="1.5" PointX="3" PointY="1.375" />
+        <EntityTypeShape EntityType="BarberIIModel.SummaryTable" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="BarberIIModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="BarberIIModel.Prikol" Width="1.5" PointX="7.75" PointY="0.75" />
+        <AssociationConnector Association="BarberIIModel.FK_SummaryTable_Employee" />
+        <AssociationConnector Association="BarberIIModel.FK_Material_Maker" />
+        <AssociationConnector Association="BarberIIModel.FK_SummaryTable_Material" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

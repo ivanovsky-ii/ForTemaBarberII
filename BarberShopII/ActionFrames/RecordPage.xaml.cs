@@ -27,8 +27,6 @@ namespace BarberShopII.ActionFrames
         {
             InitializeComponent();
             ChooseEmployee.ItemsSource = conDB.bred.Employee.ToList();
-            ChooseMaterial.ItemsSource = conDB.bred.Material.ToList();
-            ChooseMaker.ItemsSource = conDB.bred.Material.ToList();
         }
 
         private void NewRecordBtn_Click(object sender, RoutedEventArgs e)
@@ -40,13 +38,25 @@ namespace BarberShopII.ActionFrames
             su.Amount = Convert.ToInt32(amountTbx.Text);
 
 
+            
+
 
             conDB.bred.SummaryTable.Add(su);
             conDB.bred.SaveChanges();
 
             MessageBox.Show("Успешно");
 
-            NavigationCLass.MainAction.Navigate(new ActionFrames.AllViewPage());
+            NavigationCLass.MainAction.Navigate(new ActionFrames.AllViewPage((Employee)ChooseEmployee.SelectedItem));
+        }
+
+        private void ChooseEmployee_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ChooseMaker.ItemsSource = conDB.bred.Maker.ToList();
+        }
+
+        private void ChooseMaker_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        { 
+            ChooseMaterial.ItemsSource = conDB.bred.Material.Where(wer => wer.IdMaker == ((Maker)ChooseMaker.SelectedItem).Id).ToList();
         }
     }
 }
